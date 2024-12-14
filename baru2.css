@@ -1,0 +1,150 @@
+/* Gaya Umum */
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background: linear-gradient(to right, #f9f9f9, #e6e9f0);
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+header {
+    background: linear-gradient(90deg, #ff8c00, #ff5500);
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin: 0;
+    font-weight: 700;
+}
+
+/* Bagian Produk */
+.produk {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 40px;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.item-produk {
+    background: #fff;
+    border: 2px solid #f1f1f1;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+}
+
+.item-produk:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+}
+
+.item-produk img {
+    width: 100%;
+    height: auto;
+    border-bottom: 2px solid #f1f1f1;
+}
+
+.item-produk h3 {
+    font-size: 1.5em;
+    color: #ff8c00;
+    margin: 15px 0;
+}
+
+.item-produk p {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.btn-beli {
+    background: linear-gradient(90deg, #ff8c00, #ff5500);
+    color: #fff;
+    padding: 10px 25px;
+    font-size: 1em;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-beli:hover {
+    background: linear-gradient(90deg, #ff5500, #ff8c00);
+}
+
+/* Keranjang Belanja */
+.keranjang {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: linear-gradient(90deg, #ff8c00, #ff5500);
+    color: #fff;
+    padding: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.5em;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.keranjang:hover {
+    transform: rotate(20deg) scale(1.1);
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+    font-size: 0.9em;
+}
+
+footer p {
+    margin: 0;
+    font-weight: 500;
+}
+
+/* Animasi Masuk */
+.item-produk {
+    animation: fadeInUp 0.5s ease-in-out;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    .btn-beli {
+        font-size: 0.9em;
+    }
+
+    .keranjang {
+        font-size: 1.2em;
+    }
+}
